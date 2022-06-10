@@ -1,4 +1,4 @@
-FROM codercom/code-server:3.9.0
+FROM codercom/code-server:4.4.0
 LABEL maintainer="richard@mosibi.nl"
 
 USER root
@@ -39,12 +39,10 @@ RUN code-server --install-extension ms-python.python && \
     code-server --install-extension vscoss.vscode-ansible && \
     code-server --install-extension yzhang.markdown-all-in-one && \
     code-server --install-extension ms-vscode.cpptools && \
-    code-server --install-extension redhat.java && \
-    code-server --install-extension vscjava.vscode-java-debug && \
-    code-server --install-extension vscjava.vscode-java-test && \
-    code-server --install-extension vscjava.vscode-maven && \
-    code-server --install-extension vscjava.vscode-java-dependency && \
-    code-server --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
+    code-server --install-extension ms-kubernetes-tools.vscode-kubernetes-tools && \
+    code-server --install-extension docsmsft.docs-yaml && \
+    code-server --install-extension ms-azuretools.vscode-docker && \
+    code-server --install-extension ms-vscode-remote.remote-containers
 
 ###
 # Cleanup

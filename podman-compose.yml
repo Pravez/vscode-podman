@@ -1,0 +1,12 @@
+version: '3'
+services:
+  code-server:
+    build:
+      context: .
+    container_name: code-server
+    volumes:
+      - /home/pbreton/workspace:/home/coder/project:z
+      - /home/pbreton/.config:/home/coder/.config:z
+      - /home/pbreton/.config/code-server:/root/.config/code-server:z
+    ports:
+      - 8080:8080
